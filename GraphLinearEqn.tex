@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage[letterpaper,margin=0.6in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{float}
 \usepackage{tkz-euclide}
 
 \pagestyle{empty}
@@ -16,25 +17,56 @@
 
 \section*{Draw each equation on a coordinate grid}
 
-\addvspace{0.2in}
+Calculate the numbers in the T-table, plot them on the coordinate grid, and connect with a line.
 
 \begin{center}
-$y = x + 2$
-\par
-\begin{tikzpicture}
-\tkzInit[xmax=5,ymax=5,xmin=-5,ymin=-5]
-\tkzGrid
-\tkzAxeXY
-\end{tikzpicture}
+\begin{enumerate}
+\item $y = x + 2$
 
-\addvspace{0.3in}
+\begin{figure}[H]
+	\centering
+    \begin{minipage}{0.25\textwidth}
+ 		\begin{tabular}{c|c}
+ 			x & y \\
+ 		    \hline
+ 			2 \\
+ 			1 \\
+ 			0 \\
+ 			-1 \\
+ 		\end{tabular}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+     	\begin{tikzpicture}[scale=0.9]
+			\tkzInit[xmax=5,ymax=5,xmin=-5,ymin=-5]
+			\tkzGrid
+			\tkzAxeXY
+		\end{tikzpicture}
+    \end{minipage}
+\end{figure}
 
-$y = 2x - 1$
-\par
-\begin{tikzpicture}
-\tkzInit[xmax=5,ymax=5,xmin=-5,ymin=-5]
-\tkzGrid
-\tkzAxeXY
-\end{tikzpicture}
+\item $y = 2x - 1$
+
+\begin{figure}[H]
+	\centering
+    \begin{minipage}{0.25\textwidth}
+ 		\begin{tabular}{c|c}
+ 			x & y \\
+ 		    \hline
+ 			2 \\
+ 			1 \\
+ 			0 \\
+ 			-1 \\
+ 		\end{tabular}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+     	\begin{tikzpicture}[scale=0.9]
+			\tkzInit[xmax=5,ymax=5,xmin=-5,ymin=-5]
+			\tkzGrid
+			\tkzAxeXY
+		\end{tikzpicture}
+    \end{minipage}
+\end{figure}
+
+\end{enumerate}
 \end{center}
 \end{document}
