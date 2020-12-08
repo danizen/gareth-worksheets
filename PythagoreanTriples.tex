@@ -7,20 +7,23 @@
 \usepackage{float}
 \usepackage{tkz-euclide}
 
+
+\newcommand\lreqn[2]{\noindent\makebox[\textwidth]{$\displaystyle#1$\hfill(#2)}\vspace{2ex}}
+
 \pagestyle{empty}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{for Gareth}
+\lhead{Name:}
 \rhead{\textit{December 8, 2020}}
 
 \begin{document}
 
 \section*{Pythagorean Triples}
 
-Pythagorean triples are sets of positive whole numbers which satisfy the pythagorean theorem.
+Pythagorean triples are sets of positive whole numbers whichb satisfy the pythagorean theorem.
 We can generate them using the following method.
 
-First, choose whole numbers $n$ and $m$ such that $m > n$, then:
+\noindent First, choose whole numbers $n$ and $m$ such that $m > n$, then:
 
 \begin{align*} 
 a &= m^2 - n^2 \\
@@ -30,7 +33,7 @@ c &= m^2 + n^2
 
 \subsection*{Generating some triples}
 
-Following the formular above for calculating $a$, $b$, and $c$, generate these triples.
+Following the formulae above for calculating $a$, $b$, and $c$, generate these triples.
 
 \begin{table}[ht]
   \begin{tabular}{c|c|c|c|c}
@@ -41,5 +44,27 @@ Following the formular above for calculating $a$, $b$, and $c$, generate these t
       2  &  3  &   &   &   \\
   \end{tabular}
 \end{table}
+
+\subsection*{Prove using Algebra}
+
+Put $a^2 + b^2$ with the foumlae above in simplest form:
+
+\begin{align*}
+ a^2 + b^2 &= (m^2 -n^2)^2 + (2nm)^2 \\
+           &= (m^2 - n^2)(m^2 - n^2) + (2nm)(2nm) \\
+           &= m^2(m^2 - n^2) - n^2(m^2 - n^2) + 4n^2m^2 \\
+           &= m^4 - n^2m^2  -n^2m^2 + n^4 + 4n^2m^2 \\
+           &= m^4 + n^4 + 2n^2m^2
+\end{align*}
+
+\noindent Put $c^2$ in simplest form:
+
+\begin{align*}
+ c^2 &= (m^2 + n^2)^2 \\
+     &= (m^2 + n^2)(m^2 + n^2) \\
+     &= m^2(m^2 + n^2) + n^2(m^2 + n^2) \\
+     &= m^4 + n^2m^2 + n^2m^2 + n^4 \\
+     &= m^4 + n^4 + 2n^2m^2
+\end{align*}
 
 \end{document}
